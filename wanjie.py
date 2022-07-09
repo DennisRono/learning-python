@@ -16,5 +16,5 @@
 import os
 
 for fyle in os.listdir("venv"):
-    if os.stat(fyle).st_size > 20000:
+    if os.stat(fyle).st_size > 20:
         print(fyle, os.stat(fyle).st_size)
