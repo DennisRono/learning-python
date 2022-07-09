@@ -15,7 +15,6 @@ def main():
     listOfFiles = list()
     for (dirpath, dirnames, filenames) in os.walk(dirName):
         listOfFiles += [os.path.join(dirpath, file) for file in filenames]
-    for elem in listOfFiles:
-        print(elem)
+    print(listOfFiles)
 if __name__ == '__main__':
     main()
