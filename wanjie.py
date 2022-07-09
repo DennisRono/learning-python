@@ -7,7 +7,7 @@ def filterFileBySize(dirname, filesize):
     files = list(filter(lambda x:os.path.getsize(x)>filesize, listOfFiles))
     for r in files:
         f = open("results.txt", "a")
-        f.write(r)
+        f.write(r+"\n")
     f.close()
 
 

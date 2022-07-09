@@ -1,1 +1,4 @@
-venv\Lib\site-packages\pip\_vendor\certifi\cacert.pemvenv\Lib\site-packages\pip\_vendor\rich\__pycache__\_emoji_codes.cpython-310.pycvenv\Scripts\python.exevenv\Scripts\pythonw.exe
+venv\Lib\site-packages\pip\_vendor\certifi\cacert.pem
+venv\Lib\site-packages\pip\_vendor\rich\__pycache__\_emoji_codes.cpython-310.pyc
+venv\Scripts\python.exe
+venv\Scripts\pythonw.exe
