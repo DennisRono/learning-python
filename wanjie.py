@@ -13,7 +13,7 @@ import os
 def main():
     dirName = 'venv';
     listOfFiles = list()
-    for (dirpath, filenames) in os.walk(dirName):
+    for (dirpath, dirnames, filenames) in os.walk(dirName):
         listOfFiles += [os.path.join(dirpath, file) for file in filenames]
     for elem in listOfFiles:
         print(elem)
