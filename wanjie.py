@@ -13,9 +13,8 @@
 # for x in os.listdir("venv"):
 #     print(x)
 
-import glob
 import os
 
-for fyle in glob.glob('*'):
+for fyle in os.listdir("venv"):
     if os.stat(fyle).st_size > 20000:
-        print fyle, os.stat(fyle).st_size
+        print(fyle, os.stat(fyle).st_size)
