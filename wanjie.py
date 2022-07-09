@@ -19,14 +19,14 @@ def getListOfFiles(dirName):
             allFiles = allFiles + getListOfFiles(fullPath)
         else:
             allFiles.append(fullPath)
-    return allFiles        
+    return allFiles
+
 def main():
     dirName = 'venv';
-    
-    listOfFiles = getListOfFiles(dirName)
-    for elem in listOfFiles:
-        print(elem)
-    print ("****************")
+    # listOfFiles = getListOfFiles(dirName)
+    # for elem in listOfFiles:
+    #     print(elem)
+    # print ("****************")
     listOfFiles = list()
     for (dirpath, dirnames, filenames) in os.walk(dirName):
         listOfFiles += [os.path.join(dirpath, file) for file in filenames]
