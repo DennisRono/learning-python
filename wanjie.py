@@ -16,6 +16,11 @@ def main():
     for (dirpath, dirnames, filenames) in os.walk(dirName):
         listOfFiles += [os.path.join(dirpath, file) for file in filenames]
     files = list(filter(lambda x:os.path.getsize(x)>2000, listOfFiles))
-    print(files)
+    for r in files:
+        f = open("results.txt", "a")
+        f.write(r)
+    f.close()
+
+    
 if __name__ == '__main__':
     main()
