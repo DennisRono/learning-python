@@ -1,5 +1,4 @@
 import os
 
-# get size in bytes
-path = 'path/to/file.txt'
-size = os.path.getsize(path)
+def files(dirname, filesize):
+    [(path +file) for file in os.listdir(dirname) if os.path.getsize(file) > filesize]
