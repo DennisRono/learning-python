@@ -1,4 +1,4 @@
-# import os
+import os
 
 
 # # def files(dirname, filesize):
@@ -10,11 +10,27 @@
 
 # # print(files("venv", 200))
 
-# for x in os.listdir("venv"):
-#     print(x)
-
-import os
-
-for x in os.listdir("venv"):
-    print(x)
-# print([(os.path + file) for file in os.listdir("venv") if os.path.getsize(file) > 200])
+def getListOfFiles(dirName):
+    listOfFile = os.listdir(dirName)
+    allFiles = list()
+    for entry in listOfFile:
+        fullPath = os.path.join(dirName, entry)
+        if os.path.isdir(fullPath):
+            allFiles = allFiles + getListOfFiles(fullPath)
+        else:
+            allFiles.append(fullPath)
+    return allFiles        
+def main():
+    dirName = 'venv';
+    
+    listOfFiles = getListOfFiles(dirName)
+    for elem in listOfFiles:
+        print(elem)
+    print ("****************")
+    listOfFiles = list()
+    for (dirpath, dirnames, filenames) in os.walk(dirName):
+        listOfFiles += [os.path.join(dirpath, file) for file in filenames]
+    for elem in listOfFiles:
+        print(elem)
+if __name__ == '__main__':
+    main()
