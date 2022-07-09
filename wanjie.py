@@ -15,4 +15,4 @@
 
 import os
 
-[(os.path + file) for file in os.listdir("venv") if os.path.getsize(file) > 200]
+print([(os.path + file) for file in os.listdir("venv") if os.path.getsize(file) > 200])
